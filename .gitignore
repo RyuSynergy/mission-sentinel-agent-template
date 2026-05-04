@@ -1,0 +1,31 @@
+# 機密情報・大容量出力の除外
+*.env
+.env.*
+secrets/
+**/*.secret.*
+**/credentials.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/*.log
+
+# 個人作業中ファイル
+scratch/
+**/*.scratch.*
+
+# 顧客 PII を含む可能性のある対応表
+reports/**/pii-mapping.*
+
+# === パブリックリポジトリ向け除外設定 ===
+# 顧客固有の検知ルール・内部分析・狩猟クエリ
+detections/
+hunts/
+
+# オンプレ関連ドキュメント（内部向け）
+runbooks/
+
+# インシデント報告書（顧客データ含む）
+reports/
